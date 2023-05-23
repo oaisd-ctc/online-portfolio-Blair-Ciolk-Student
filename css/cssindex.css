@@ -1,0 +1,49 @@
+#bodyofwebsite {
+    background-color: orange;
+}
+
+#topsection {}
+
+#Header {}
+
+.center {
+    text-align: center;
+}
+
+#navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(212, 143, 14);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a :hover:not(.active) {
+    background-color: rgb(250, 179, 47);
+}
+
+.active {
+    background-color: rgb(252, 190, 74);
+}
+
+#footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(218, 154, 36);
+    color: white;
+    text-align: center;
+}
