@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  font-family: "Ubuntu";
 }
 #bodyofwebsite {
   background-color: gray;
@@ -7,6 +8,10 @@ html {
 
 .center {
   text-align: center;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 #navbar {
