@@ -20,21 +20,26 @@
 
 <body id="bodyofwebsite">
   <div class="center" id="topsection">
+
     <!-- NavBar -->
-    <ul id="navbar" class="center">
-      <li><a href="#navbar">Home</a></li>
-      <li><a href="#Projects">Projects</a></li>
-      <li><a href="#Labs">Labs</a></li>
-      <li><a href="#Certifications">Certifications</a></li>
-      <li><a href="#Profile">Profile</a></li>
-      <li><a href="#ContactMe">Contact & Info</a></li>
-    </ul>
+    <div id="navbar">
+      <a class="navbartext" href="#navbar">Home</a>
+      <a class="navbartext" href="#Projects">Projects</a>
+      <a class="navbartext" href="#Labs">Labs</a>
+      <a class="navbartext" href="#Certifications">Certifications</a>
+      <a class="navbartext" href="#Profile">Profile</a>
+      <a class="navbartext" href="#ContactMe">Contact & Info</a>
+    </div>
+
     <br>
-    <!-- Section One -->
+
+    <!-- Header-->
     <div id="Header">
       <h1>Blair Ciolk's Online Portfolio</h1>
     </div>
+
     <br>
+
     <p>
       This site is an informational page highlighting some of my projects that
       I have completed over the months.
@@ -43,16 +48,19 @@
       it out!
     </p>
   </div>
+
   <br>
-  <!-- Section Two -->
+
+  <!-- Projects -->
   <div id="Projects" class="center">
     <h2 class="underline">Projects</h2>
-    <br>
+    <!-- <br> -->
     <h3>Reinventing the Wheel</h3>
+
     <p>
       Reinventing the Wheel was a project done by Charlie Van Abbema, and
       myself.
-      <br />
+      <br>
       The idea of this project was to create a
       <a href="https://www.nuget.org" target="_blank">Nuget Package</a> that
       people would find useful by better understanding how default functions
@@ -65,49 +73,79 @@
       <a href="https://github.com/oaisd-ctc/reinventing-the-wheel-charlie-vanabbema-student" target="_blank">here.</a>
     </p>
   </div>
-  <hr>
-
-  <!-- Section Three -->
-  <div class="center" id="Labs">
-    <h2 class="underline center">Labs</h2>
-    <!-- <br> -->
-    <img class="warningicon" src="images/icons/error.png" alt="Warning Icon">
-    <p class="center">The following labs were completed in class using video tutorials from the website <a
-        href="https://www.gamedev.tv/">gamedev.tv</a>.
-      <br>
-      The following labs are my best/favorite first games, slander will not be tolerated.
-    </p>
-    <img class="warningicon" src="images/icons/error.png" alt="Warning Icon">
-
-    <br>
-
-
-    <div>
-      <h3>Delivery Driver Lab</h3>
-      <p>The delivery driver lab consisted of creating a drivable car that picks up "deliveries" and requires the player
-        to return the object to a specific area to score a point.</p>
-
-
-      <br>
-    </div>
-
-
-    <div>
-      <h3>Snowboarder Lab</h3>
-      <p>The snowboarder lab lets the player simulate snowboarding and doing tricks. </p>
-      <br>
-    </div>
-
-    <div>
-      <h3>Quiz Master Lab</h3>
-      <p>The quiz master lab is a lab for testing your intelligence</p>
-    </div>
-  </div>
 
   <br>
   <hr>
 
+  <!-- Labs -->
+  <div id="Labs">
+    <br>
+    <h2 class="underline center">Labs</h2>
+    <p class="center">The following labs were completed in class using video tutorials from the website <a
+        href="https://www.gamedev.tv/">Gamedev.tv</a>.
+    </p>
 
+
+    <br>
+    <br>
+
+    <div class="center">
+      <h3>Delivery Driver Lab</h3>
+      <p>The delivery driver lab consisted of creating a drivable car that picks up "deliveries" and requires the player
+        to return the object to a specific area to score a point.
+        <br>
+        Although simple sounding, this game introduced velocity, player controls, interacting with objects, and more new
+        topics that would help in later game development.
+        <br>
+
+        <img src="images/games/deliverydriver/delliverydriverss.png"
+          alt="A yellow car on a road with a box and a red circle nearby with houses and trees"
+          id="deliverydriverpicture" class="center">
+
+      </p>
+    </div>
+    <br>
+    <p class="right" style="margin-right: 5%; ">The code snippet defines what should happen to the player
+      when
+      the player interacts with an object with the script.
+      <br>
+      This snippet is a part of a longer piece of code, but this small piece of code detects whether or not the player
+      has successfully returned a package. <br> The total delivered amount will update, the car will change colors, and
+      the
+      boolean
+      "hasPackage" will become false, meaning the player can now get another package.
+    </p>
+    <br>
+    <pre style="margin-left:10%; margin-right: 50%;">
+        if (other.tag == "Customer" && hasPackage == true)
+        {
+            totalDelivered++;
+            Debug.Log($"You delivered: " + totalDelivered + " packages.");
+            packageObtained.text = $"Packages Delivered: " + totalDelivered;
+            spriteRenderer.color = noPackageColor;
+            hasPackage = false;
+        }
+    </pre>
+
+
+    <div class="center">
+      <h3>Snowboarder Lab</h3>
+      <p>The snowboarder lab lets the player simulate snowboarding on a snowhill. </p>
+      <br>
+    </div>
+
+    <div class="center">
+      <h3>Quiz Master Lab</h3>
+      <p>The quiz master lab was a simple game for learning switching scenes in Unity.
+      </p>
+    </div>
+  </div>
+
+  <br>
+
+  <hr>
+
+  <br>
 
   <!-- Certification Badges -->
   <h2 class="underline center">Certifications</h2>
@@ -129,9 +167,10 @@
   </div>
   </div>
 
-
   <hr>
-  <!-- Information -->
+  <br>
+
+  <!-- Profile -->
   </div>
   <div id="Profile">
     <h2 class="underline center" style="padding: 5px;">Profile</h2>
@@ -140,27 +179,35 @@
       Age: 16 years
       <br>
       I am currently in my Junior year of high school at Hudsonville. <br>
-
+      <br>
       Ever since I was young, I have wanted to create games, but could never find a class or instructor until now.
     </p>
   </div>
+
+
+
   <br>
+
+
   <img class="centerimg" id="selfport" src="images/portraits/selfportrait.jpg"
     alt="Person with foot against a wall covered in names holding up four fingers looking right">
+
   <br>
+
   <!-- Other information -->
   <div id="ContactMe">
-    <h2 class="underline center">Contact/Info</h2>
+    <h2 class="underline center">Contact and Other Information</h2>
     <p class="center">
-
-
       <br>
       Email:
-      <a href="mailto:cacib86@student.oaisd.org" style="padding-bottom: 20em;">cacib86@student.oaisd.org</a>
+      <a href="mailto:cacib86@student.oaisd.org" style="padding-bottom: 4em;">cacib86@student.oaisd.org</a>
       <br>
+      Resumé Download: <a href="#">placeholder</a>
     </p>
   </div>
 </body>
+
+
 <!-- Footer -->
 <footer class="center" id="footer">
   <p>Blair Ciolk</p>

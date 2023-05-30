@@ -2,8 +2,37 @@ html {
   scroll-behavior: smooth;
   font-family: "Ubuntu";
 }
+
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #bodyofwebsite {
   background-color: gray;
+}
+
+#navbar {
+  background-color: rgb(105, 105, 105);
+  padding: .4em;
+  overflow: hidden;
+}
+
+.navbartext {
+  color: rgb(0, 0, 0);
+  padding: .5em;
+  font-size: larger;
+}
+
+a:visited {
+  color: rgb(37, 37, 37);
+}
+
+
+.active {
+  background-color: rgb(49, 40, 40);
 }
 
 .centerimg {
@@ -13,10 +42,16 @@ html {
   width: 50%;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.right {
+  text-align: right;
+  align-items: right;
+  align-self: right;
+}
+
+.left {
+  text-align: left;
+  align-items: left;
+  align-self: left;
 }
 
 .center {
@@ -25,11 +60,20 @@ html {
   align-self: center;
 }
 
-.warningicon{
+.warningicon {
   width: 2%;
 }
 
-hr{
+#deliverydriverpicture {
+  width: 30%;
+  padding: .6em;
+}
+
+
+
+
+
+hr {
   border: 1.5px dashed rgb(105, 105, 105);
 }
 
@@ -37,6 +81,7 @@ hr{
 .underline {
   text-decoration: underline;
 }
+
 #badges {
   display: flex;
   justify-content: center;
@@ -45,47 +90,7 @@ hr{
   flex-wrap: wrap;
 }
 
-#navbar {
-  position: sticky;
-  top: 0;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: rgb(105, 105, 105);
-}
 
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a :hover:not(.active) {
-  background-color: rgb(241, 110, 23);
-}
-
-.active {
-  background-color: rgb(88, 88, 88);
-}
-
-.skillgrid {
-  display: flex;
-  width: 100%;
-  padding: auto;
-  margin: auto;
-  flex-wrap: nowrap;
-}
-
-.polaroid {
-  width: 80%;
-}
 
 .container {
   text-align: center;
@@ -97,6 +102,7 @@ li a :hover:not(.active) {
   border-radius: 30%;
   border: 10px solid transparent;
 }
+
 #footer {
   position: fixed;
   left: 0px;
@@ -107,25 +113,3 @@ li a :hover:not(.active) {
   text-align: center;
   padding-bottom: 0;
 }
-/* 
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-
-  position: absolute;
-  z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-} */
