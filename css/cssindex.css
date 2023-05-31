@@ -1,6 +1,8 @@
 html {
   scroll-behavior: smooth;
   font-family: "Ubuntu";
+  display: flex;
+  word-break: keep-all;
 }
 
 * {
@@ -10,8 +12,8 @@ html {
   box-sizing: border-box;
 }
 
-#bodyofwebsite {
-  background-color: gray;
+#Header {
+  margin: 1.5em;
 }
 
 #navbar {
@@ -26,6 +28,18 @@ html {
   font-size: larger;
 }
 
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky+.content {
+  padding-top: 30px;
+}
+
 a:visited {
   color: rgb(37, 37, 37);
 }
@@ -35,12 +49,9 @@ a:visited {
   background-color: rgb(49, 40, 40);
 }
 
-.centerimg {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
+
+
+
 
 .right {
   text-align: right;
@@ -55,10 +66,26 @@ a:visited {
 }
 
 .center {
+
   text-align: center;
   align-items: center;
   align-self: center;
 }
+
+body {
+  background: #808080;
+  background-repeat: repeat;
+
+
+}
+
+.centerimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 
 .warningicon {
   width: 2%;
@@ -66,12 +93,21 @@ a:visited {
 
 #deliverydriverpicture {
   width: 30%;
-  padding: .6em;
+  margin-top: .8em;
+  border-radius: 10%;
+  border: 3px dashed rgb(61, 61, 61);
 }
 
 
+#snippetdescription1 {
+  font-size: small;
+}
 
-
+#snowboarder {
+  width: 25%;
+  border-radius: 10%;
+  border: 3px dashed rgb(61, 61, 61);
+}
 
 hr {
   border: 1.5px dashed rgb(105, 105, 105);
@@ -82,25 +118,23 @@ hr {
   text-decoration: underline;
 }
 
-#badges {
+#Certs {
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-  flex-wrap: wrap;
+
 }
 
 
 
-.container {
-  text-align: center;
-  padding: 10px 20px;
-}
+
+
 
 #selfport {
   width: 10%;
-  border-radius: 30%;
-  border: 10px solid transparent;
+  border-radius: 20%;
+  border: 3px dashed rgb(61, 61, 61);
 }
 
 #footer {
