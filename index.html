@@ -37,8 +37,7 @@
       <a class="navbartext" href="#Profile">Profile</a>
       <a class="navbartext" href="#ContactMe">Contact & Info</a>
     </div>
-    <br>
-    <br>
+    
 
     <p>
       This site is an informational page highlighting some of my projects that
@@ -61,7 +60,7 @@
     <h3>Reinventing the Wheel</h3>
 
     <p>
-      Reinventing the Wheel was a project done by Charlie Van Abbema, and
+      Reinventing the Wheel was a project done by Charlie Van Abbema, a classmate, and
       myself.
       <br>
       The idea of this project was to create a
@@ -72,7 +71,7 @@
       Link to Nuget Package
       <a href="https://www.nuget.org/packages/static-class-practice-Blair-Ciolk-Student/" target="_blank">here.</a>
       <br>
-      Link to the GitHub page
+      Link to  GitHub page
       <a href="https://github.com/oaisd-ctc/reinventing-the-wheel-charlie-vanabbema-student" target="_blank">here.</a>
     </p>
     <br>
@@ -128,12 +127,31 @@
         By using the left and right arrow keys, the player could tilt the player forward and backwards in hope of making
         it to the end of the level.
       </p>
-      <br>
-
 
       <img src="images/games/snowboarder/snowboarder1.png" alt="A snowboarder jumping over snow" id="snowboarder">
-    </div>
 
+      <ul id="snippetdescription1" class="right">
+        <br>
+        This code snippet defines what should happen when the top of the player touches the ground. <br> If the tag is
+        "Ground" and the boolean "hasCrashed" is false: <br> Control over the player will be disabled <br>
+        <li> The boolean</li>
+        <li> will update </li>
+        <li> An effect with sound will play </li>
+        <li> The scene will reload.</li>
+      </ul>
+
+      <div id="code2">
+        <pre>
+          void OnTriggerEnter2D(Collider2D other) {
+          if (other.tag == "Ground" && !hasCrashed) {
+          FindObjectOfType<PlayerController>().DisableControls();
+            hasCrashed = true;
+            crashEffect.Play();
+          GetComponent<AudioSource>().PlayOneShot(crashSFX);
+              Invoke("ReloadScene", delayTime); } }
+        </pre>
+      </div>
+    </div>
 
 
 
@@ -147,10 +165,18 @@
           id="quizmaster">
       </p>
       <br>
-      <div id="code2">
+      <p id="snippetdescription1" class="right">
+        This code snippet defines how the game will generate a random question. <br>
+        First, the variable "index" is set to a random range of 0 to the amount of questions created. <br>
+        The variable "currentQuestion" is set to the random number picked above.
+        That will be the question displayed. <br>
+        Last, the script checks for duplicate questions and removes them.
+      </p>
+
+      <div id="code3">
         <pre>
-  void GetRandomQuestion() {
-      int index = Random.Range(0, questions.Count);
+void GetRandomQuestion() {
+                int index = Random.Range(0, questions.Count);
       currentQuestion = questions[index];
 
         if (questions.Contains(currentQuestion)) {
@@ -196,12 +222,17 @@
 
   <!-- Profile -->
   <div id="Profile">
-    <h2 class="underline center" style="padding: 5px;">Profile</h2>
+    <h2 class="underline center" style="padding: 5px;"><img class="heart" src="images/icons/heart.png"
+        alt="heart">Profile<img class="heart" src="images/icons/heart.png" alt="heart"
+        style="-webkit-transform: scaleX(-1); transform: scaleX(-1);"></h2>
+
     <div class="center">
       <p>
-        Name: Blair P. Ciolk
+        Name: Blair Ciolk
         <br>
         Time Survived: 16 years, 8 months
+        <br>
+        School: Hudsonville High School
         <br>
         Grade: 11th
       </p>
@@ -210,14 +241,15 @@
       <h3 class="center underline">Other Information</h3>
       <p class="center">
 
-        Ever since I was young, I have wanted to create games, but could never find a class or instructor until now.
+        Ever since I can remember, I have wanted to develop games.
 
         <br>
-        In my free time, I enjoy playing games such as Far Cry and Just Cause. I love many different types
+        In my free time, I enjoy playing games such as Far Cry and Just Cause. <br>
+        I love many different types
         of music but I
         specifially love $uicideBoy$.
         <br>
-        An interesting fact some people may or may not know about me is that I had open heart surgery in the fifth
+        An interesting fact about me is that I had open heart surgery in the fifth
         grade, replacing my inadequate pulmonary valve with a stronger, healthier one.
       </p>
     </div>
@@ -242,14 +274,16 @@
       Email:
       <a href="mailto:cacib86@student.oaisd.org" style="padding-bottom: 4em;">cacib86@student.oaisd.org</a>
       <br>
-      Resumé Download: <a href="#">placeholder</a>
+      <a href="https://github.com/Blair-Ciolk-Student" target="_blank">GitHub Account</a>
+      <br>
+      <a href="/pdf/Blair Ciolk - Resume.pdf" target="_blank">View My Resumé</a>
     </p>
   </div>
 </body>
 
 
 <!-- Footer -->
-<img src="/images/icons/g59_white.png" alt="G59 Lettering" class="centerimg" style="width: 15%; padding: 20px;">
+<img id="g59footer" src="/images/icons/g59_white.png" alt="G59 Lettering" class="centerimg">
 
 
 

@@ -50,9 +50,6 @@ a:visited {
 }
 
 
-
-
-
 .right {
   text-align: right;
 
@@ -70,8 +67,9 @@ a:visited {
   align-self: center;
 }
 
+
 body {
-  background: #808080;
+  background:#808080;
   background-repeat: repeat;
 
 
@@ -90,7 +88,7 @@ body {
 }
 
 #deliverydriverpicture {
-  width: 30%;
+  width: 25%;
   margin-top: .8em;
   border-radius: 10%;
   border: 3px dashed rgb(61, 61, 61);
@@ -103,6 +101,7 @@ body {
 }
 
 #snowboarder {
+  margin: 1em;
   width: 25%;
   border-radius: 10%;
   border: 3px dashed rgb(61, 61, 61);
@@ -110,14 +109,17 @@ body {
 
 #quizmaster {
   margin-top: 1em;
-  width: 30%;
-  border-radius: 25%;
+  width: 25%;
+  border-radius: 10%;
   border: 3px dashed rgb(61, 61, 61);
 }
 
-#code1 {}
 
-#code2 {}
+#code2 {
+  margin: 1em;
+}
+
+
 
 pre {
   margin-left: 0%;
@@ -141,9 +143,16 @@ hr {
 
 }
 
+.heart
+{
+  width: 1em;
+}
 
-
-
+#g59footer {
+  width: 15%;
+  margin-bottom: 2em;
+  margin-top: 1em;
+}
 
 
 #selfport {
