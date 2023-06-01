@@ -37,7 +37,7 @@
       <a class="navbartext" href="#Profile">Profile</a>
       <a class="navbartext" href="#ContactMe">Contact & Info</a>
     </div>
-    
+
 
     <p>
       This site is an informational page highlighting some of my projects that
@@ -71,7 +71,7 @@
       Link to Nuget Package
       <a href="https://www.nuget.org/packages/static-class-practice-Blair-Ciolk-Student/" target="_blank">here.</a>
       <br>
-      Link to  GitHub page
+      Link to GitHub page
       <a href="https://github.com/oaisd-ctc/reinventing-the-wheel-charlie-vanabbema-student" target="_blank">here.</a>
     </p>
     <br>
@@ -92,7 +92,7 @@
 
     <br>
     <!-- Description of the snippet -->
-    <p id="snippetdescription1" class="right">The code snippet defines what should happen to
+    <p id="snippetdescription1" class="center">The code snippet defines what should happen to
       the player
       when
       the player interacts with an object with the script.
@@ -105,8 +105,10 @@
       boolean
       "hasPackage" will become false, <br> meaning the player can now retrieve another package.
     </p>
+
+    <br>
     <!-- Code Snippet From Delivery Driver Script -->
-    <div id="code1">
+    <div class="center" id="code1">
       <pre>
         if (other.tag == "Customer" && hasPackage == true) {
       totalDelivered++;
@@ -130,7 +132,7 @@
 
       <img src="images/games/snowboarder/snowboarder1.png" alt="A snowboarder jumping over snow" id="snowboarder">
 
-      <ul id="snippetdescription1" class="right">
+      <ul id="snippetdescription1" class="center">
         <br>
         This code snippet defines what should happen when the top of the player touches the ground. <br> If the tag is
         "Ground" and the boolean "hasCrashed" is false: <br> Control over the player will be disabled <br>
@@ -139,7 +141,7 @@
         <li> An effect with sound will play </li>
         <li> The scene will reload.</li>
       </ul>
-
+      <br>
       <div id="code2">
         <pre>
           void OnTriggerEnter2D(Collider2D other) {
@@ -149,7 +151,8 @@
             crashEffect.Play();
           GetComponent<AudioSource>().PlayOneShot(crashSFX);
               Invoke("ReloadScene", delayTime); } }
-        </pre>
+</pre>
+        <br>
       </div>
     </div>
 
@@ -165,7 +168,7 @@
           id="quizmaster">
       </p>
       <br>
-      <p id="snippetdescription1" class="right">
+      <p id="snippetdescription1" class="center">
         This code snippet defines how the game will generate a random question. <br>
         First, the variable "index" is set to a random range of 0 to the amount of questions created. <br>
         The variable "currentQuestion" is set to the random number picked above.
@@ -173,9 +176,10 @@
         Last, the script checks for duplicate questions and removes them.
       </p>
 
+      <br>
       <div id="code3">
         <pre>
-void GetRandomQuestion() {
+  void GetRandomQuestion() {
                 int index = Random.Range(0, questions.Count);
       currentQuestion = questions[index];
 
