@@ -1,1 +1,1 @@
-This website is Blair Ciolk's online portfolio. 
+This website is Blair Ciolk's online portfolio where projects, certifications, and other information can be found about Blair Ciolk.

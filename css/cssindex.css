@@ -55,14 +55,12 @@ a:visited {
 
 .right {
   text-align: right;
-  align-items: right;
-  align-self: right;
+
 }
 
 .left {
   text-align: left;
-  align-items: left;
-  align-self: left;
+
 }
 
 .center {
@@ -101,12 +99,29 @@ body {
 
 #snippetdescription1 {
   font-size: small;
+  margin-right: 5%;
 }
 
 #snowboarder {
   width: 25%;
   border-radius: 10%;
   border: 3px dashed rgb(61, 61, 61);
+}
+
+#quizmaster {
+  margin-top: 1em;
+  width: 30%;
+  border-radius: 25%;
+  border: 3px dashed rgb(61, 61, 61);
+}
+
+#code1 {}
+
+#code2 {}
+
+pre {
+  margin-left: 0%;
+  margin-right: 0%;
 }
 
 hr {
